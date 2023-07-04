@@ -1,0 +1,70 @@
+<div class="container">
+    {% for post in page_obj %}
+
+    <div class="card mb-4 post_container" postID={{ post.id }}>
+        <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text text-muted h6"> 
+                <a class="nav-item nav-link" href="{% url 'profile' post.author.username %}">
+                <img class="rounded-circle account-img" 
+                    src="{{ post.author.profile.image.url }}" 
+                    width="30" height="30">
+                    {{ post.author }} | {{ post.created_on}} 
+                </a>
+            </p>
+            <p class="card-text">{{ post.text_rendered | safe }}</p>
+            <p class="card-text text-muted h8"> Expires: <a class="expiration_display" postID={{ post.id }} expires="{{ post.expires_on |date:"c" }}" created="{{ post.created_on |date:"c" }}"></a></p>
+
+            {% if user.is_authenticated %}
+                {% if user == post.author %}
+                    <a href="#" class="delete_post_button btn btn-primary" postID={{ post.id }}><i class="fa fa-trash"></i></a>
+                {% else %}
+                    {% if post.liked %}
+                        <a href="#" class="vote_button btn btn-primary active" postID={{ post.id }} vote="like"><i class="fa fa-thumbs-up"></i></a>
+                    {% else %}
+                        <a href="#" class="vote_button btn btn-primary" postID={{ post.id }} vote="like"><i class="fa fa-thumbs-up"></i></a>
+                    {% endif %}
+                    {% if post.disliked %}
+                        <a href="#" data-placement="bottom" class="vote_button btn btn-primary active" postID={{ post.id }} vote="dislike"><i class="fa fa-thumbs-down"></i></a>
+                    {% else %}
+                        <a href="#" data-placement="bottom" class="vote_button btn btn-primary" postID={{ post.id }} vote="dislike"><i class="fa fa-thumbs-down"></i></a>
+                    {% endif %}
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+ {% comment %} https://stackoverflow.com/questions/30864011/display-only-some-of-the-page-numbers-by-django-pagination {% endcomment %}
+<nav aria-label="Page navigation" class="d-flex justify-content-center">   <ul class="pagination">
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page=1" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">begin</span>
+      </a>
+    </li>   {% endif %}
+    
+    {% for n in page_obj.paginator.page_range %}
+      {% if page_obj.number == n %}
+        <li class="page-item active">
+          <span class="page-link">{{ n }}<span class="sr-only">(current)</span></span>
+        </li>
+      {% elif n > page_obj.number|add:'-3' and n < page_obj.number|add:'3' %}
+        <li class="page-item"><a class="page-link" href="?page={{ n }}">{{ n }}</a></li>
+      {% endif %}
+    {% endfor %}
+    
+    {% if page_obj.has_next %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">end</span>
+        </a>
+      </li>
+      {% endif %}   </ul> </nav>
+
+<script>
+    {% include 'post/interact.js' %}
+</script>

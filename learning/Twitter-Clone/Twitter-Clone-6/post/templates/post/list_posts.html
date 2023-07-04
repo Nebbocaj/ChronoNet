@@ -1,0 +1,36 @@
+<div class="container">
+    {% for post in posts %}
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text text-muted h6"> 
+                <a class="nav-item nav-link" href="{% url 'profile' post.author.username %}">
+                <img class="rounded-circle account-img" 
+                    src="{{ post.author.profile.image.url }}" 
+                    width="30" height="30">
+                    {{ post.author }} | {{ post.created_on}} 
+                </a>
+            </p>
+            <p class="card-text">{{post.content}}</p>
+            <p class="card-text text-muted h8"> Remaining views: <span id="views_left_post{{post.id}}">{{post.views_left}}</span></p>
+
+            {% if user.is_authenticated %}
+                {% if post in liked_posts %}
+                    <a href="#" class="vote_button btn btn-primary active" postID={{ post.id }} vote="like"><i class="fa fa-thumbs-up"></i></a>
+                {% else %}
+                    <a href="#" class="vote_button btn btn-primary" postID={{ post.id }} vote="like"><i class="fa fa-thumbs-up"></i></a>
+                {% endif %}
+                {% if post in disliked_posts %}
+                    <a href="#" class="vote_button btn btn-primary active" postID={{ post.id }} vote="dislike"><i class="fa fa-thumbs-down"></i></a>
+                {% else %}
+                    <a href="#" class="vote_button btn btn-primary" postID={{ post.id }} vote="dislike"><i class="fa fa-thumbs-down"></i></a>
+                {% endif %}
+            {% endif %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+    {% include 'post/like_button.js' %}
+</script>

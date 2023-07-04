@@ -1,0 +1,12 @@
+<div class="container">
+    {% for post in posts %}
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">{{ post.title }}</h2>
+            <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+            <p class="card-text">{{post.content}}</p>
+            <p class="card-text text-muted h8">Remaining views: {{post.views_left}}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>

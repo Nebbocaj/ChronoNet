@@ -1,0 +1,179 @@
+Saturday, February 5th 2022:
+
+Progress:
+1. Merged both parts of the project that were being worked on independently over the break, so we now have one project that we are able to work on for the semester. 
+2. Added a timer to each of the posts.
+3. Added basic user-specific feed for logged in users.
+4. Added the honey-pot and a development environment
+
+Roadblocks:
+There are currently no major road blocks this week. We are still making continuous progress on the project.
+
+Goals for next week:
+1. Create a mechanism which modifies time when a user likes/dislikes a post.
+2. Look into adding additional features such as markdown or images into posts.
+3. Work on creating a formula on how much time to add/subtract when a user likes/dislikes a post.
+
+
+
+Friday, February 11th 2022:
+
+Progress:
+1. Added support for using markdown in posts.
+2. Updated the navbar links.
+3. Refactored some the like/dislike code to make it more efficient moving forward.
+4. Started working on a cohesive theme to add to every page of the site.
+5. Added code to change the time when a user likes/dislikes a post.
+6. Started working on a function to add/remove time from a post optimally (this will need lots of testing throughout the project).
+
+Roadblocks:
+We still have no roadblocks.
+
+
+Goals for next two weeks:
+Jarek: Reverse proxy / Sinitizing import/ Fixing brute force
+Jason: Add security to API calls / Add more stuff to bots
+Jake: Continue exploring options for time-changing functions / Refactor code
+Matt: Implement theme into pages / Begin hosting the website
+Parker: Finish Markdown Support / Further explore the option of adding images to posts.
+
+Meeting feedback to look into:
+1. Privacy Settings.
+2. Can you delete all user information at once? (delete button)
+3. Store images as URL.
+
+
+Sunday, February 20, 2022
+1. Began refactoring code
+2. Added bots to the project
+3. Continued work on other tasks
+
+Roadblocks:
+There are still no roadblocks at this time. We will meet tomorrow (Monday February 21st) to discuss more plans going forward
+
+Goals for next week:
+Continue working on our individual tasks. We hope to have all of them done by next time we meet with Dr. Borowczak.
+
+
+Sunday February 27, 2022
+1. Continued the progress of refactoring code.
+2. Did way more with bots. Specifically added automatic text generation and random (mostly) un ique personalities. Also added profile image changing support.
+3. Continued working on adding support for markdown. Ran into a couple of minor issues throughout the week butit seems to be working now.
+4. In general, everyone worked on their own tasks seperately. 
+
+Roadblocks: 
+Still no roadblocks at this time.
+
+Goals for next week:
+1. Meet with Dr. Borowczak to discuss future plans. 
+2. continue working on the individual tasks that did not get done during this time frame. 
+3. Begin bringing everything together since the dealine is approaching.
+4. Host website.
+5. Change vote effects to be non-linear.
+6. Dispay effect of vote on hover of like and dislike button.
+
+
+Sunday, March 6, 2022
+1. Finished all of the major refactoring for the code and removed unneeded peices
+2. Added basic comments to the code
+3. Implemented a basic function to change the time on each post (can be modified if needed)
+
+Roadblocks:
+still no roadblocks
+
+Goals for the rest of the project:
+1. Give site a uniform look
+2. Get site working
+3. Finish markdown support
+4. Make sure bots are censored for presentation
+5. Create video
+Goals if we have enough time
+6. dd a way to view how much a like or dislike on a post will change the time left by hovering over the buttons
+7. Add image support
+
+
+Friday, March 11, 2022
+1. Got the site successfully hosted
+2. Settled on a color scheme and symbol
+3. Added pages so that not every posts loads at once
+4. added a way to view how much a like or dislike on a post will change the time left by hovering over the buttons
+
+Rodablocks:
+None
+
+Goals Remaining:
+1. Finish up security and hosting for the site
+2. Apply color scheme to site
+3. Add better user feed
+4. Prepare mock presentation
+5. Complete video
+
+
+Saturday, March 19, 2022 (Spring break)
+1. Updated user feed to allow more variation in what a logged in user will see
+2. Started adding theme to site
+
+Roadblocks: none
+
+Goal remaining
+1. Finish up security and hosting for the site
+2. Finish applying color scheme to site
+4. Prepare mock presentation
+5. Complete video
+
+
+Sunday, March 27, 2022
+1. Finished adding theme support. This can easily be changed by editing variables in one file now.
+2. Added markdown support
+3. Began preparation for final presentation
+4. Mapped out final issues that need to be addressed
+
+Roadblocks: none
+
+Goals:
+1. Add censorship to bots
+2. Finalize look of site
+3. Work through any bugs
+4. Finish reverse proxy and Docker set up
+5. Create final video
+
+Sunday, April 3, 2022
+1. Fixed the server so it now works 
+2. Established final goals for the project
+3. Began brainstorming presentation ideas
+
+Roadblocks:
+Had an issue earlier in the week where the server broke. This was fixed.
+
+Goals:
+1. Finish remaining issues for our project.
+2. Run final tests on the site to make sure there are no bugs.
+3. Begin working on the presentation slides.
+
+
+Sunday April 10, 2022
+1. Completed a draft for our PowerPoint presentation
+2. Added code to switch the database to PostgreSQL
+
+Roadblocks:
+None, the program is almost finished
+
+Goals:
+1. Fix links as the bottom of each page
+2. Finish the PowerPoint
+3. Make final bug tests and fix anything needed
+
+
+Friday April 15, 2022
+1. Modified the PowerPoint and did a practice presentation
+2. Split up the speaking parts of the presentation to every member
+3. Decided to do a live demo while giving audience the link for our website (will try in the practice on Monday and do it on Undergrad research day if it goes well)
+
+Roadblocks:
+There were some problems switching the database from SQL Lite to PostgreSQL.
+Will see if we can resolve these by next week. If we can't, we will just keep it in SQL since that is what works
+
+Goals:
+1. Continue to watch for bugs
+2. Do the official practice presentation on Monday
+3. Make the video for the final turn in.

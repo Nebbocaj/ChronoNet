@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% comment %} 
+We expect:
+
+profile     : Profile   :: the profile we are looking at
+isUser      : bool      :: true if this is the logged in user's own profile 
+posts       : [ Post ]  :: list of posts made by this user
+
+{% endcomment %}
+<div class="container">
+    {% if isUser %}
+    <a href="{% url 'update_profile' %}" class="btn btn-primary"><i class="fa fa-pencil"></i></a>
+    {% endif %}
+    <div class="card mb-4">
+        <div class="card-body">
+            <h2 class="card-title">{{ profile.nickname }}</h2>
+            <p class="card-text text-muted h6">{{ profile.user.username }} </p>
+
+            <img class="rounded-circle account-img" 
+                src="{{ profile.image.url }}"
+                width="50" height="50">
+        </div>
+    </div>
+
+    {% include 'post/list_posts.html' %}
+
+</div>
+
+
+{% endblock content %}

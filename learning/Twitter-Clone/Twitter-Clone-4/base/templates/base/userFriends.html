@@ -1,0 +1,41 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/userFriends.css' %}">
+</head>
+
+<body>
+
+    <h2>Your Friends</h2>
+  <section class="boxes">
+    <div class="box">
+        <ul>
+            <li><img src="{% static 'img/hlogo.png' %}">Persons Name<a class="nav-link" href=""><i class="fa fa-trash" style="color:#333"></i></a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <ul>
+            <li><img src="{% static 'img/hlogo.png' %}">Persons Name<a class="nav-link" href=""><i class="fa fa-trash" style="color:#333"></i></a></li>
+        </ul>
+    </div>
+    <div class="box">
+        <ul>
+            <li><img src="{% static 'img/hlogo.png' %}">Persons Name<a class="nav-link" href=""><i class="fa fa-trash" style="color:#333"></i></a></li>
+        </ul>
+    </div>
+  </section>
+
+</body>
+
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/userProfile.css' %}">
+</head>
+
+<body>
+
+  <section class="boxes1">
+    <div class="box1">
+      <img src="{% static 'img/hlogo.png' %}">
+      <h1>Username/Name</h1>
+      <p>Bio - Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos repellat, molestias blanditiis exercitationem nisi eaque quod, odit a et, deserunt ipsa fugiat quisquam. Recusandae animi, officiis cum illum soluta totam.</p>
+    </div>
+  </section>
+
+  <section class="boxes1">
+    <div class="box1">
+      <h1>Books</h1>
+      <a class="nav-link" href=""><i class="fa fa-plus-square"></i></a>
+      <ul>
+        <li>1<a class="nav-link" href=""><i class="fa fa-eye"></i></a></li>
+        <li>2<a class="nav-link" href=""><i class="fa fa-eye"></i></a></li>
+        <li>3<a class="nav-link" href=""><i class="fa fa-eye"></i></a></li>
+      </ul>
+    </div>
+    <div class="box1">
+      <h1>Accounts</h1>
+      <a class="nav-link" href=""><i class="fa fa-plus-square"></i></a>
+      <ul>
+        <li>1<a class="nav-link" href=""><i class="fa fa-eye"></i></a></li>
+        <li>2<a class="nav-link" href=""><i class="fa fa-eye"></i></a></li>
+        <li>3<a class="nav-link" href=""><i class="fa fa-eye"></i></a></li>
+      </ul>
+    </div>
+  </section>
+
+</body>
+
+</html>
+
+{% endblock %}

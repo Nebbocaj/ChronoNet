@@ -1,0 +1,42 @@
+.boxes {
+    display: grid;
+    grid-gap: 20px;
+    /* grid-template-columns: repeat(auto-fit, minmax(250px, 3fr)); */
+  }
+  
+  .box {
+    text-align: center;
+    background-color: #f1f1f1;
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+
+  .box ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .box li {
+    display: block;
+    font-size:18px;
+  }
+
+  .box a {
+    display: inline;
+  }
+
+  .box img{
+      height:40px;
+      width:40px;
+      border-radius:50%;
+  }
+
+  .fa {
+    color:#333;
+  }
+
+  h2{
+    text-align:center;
+  }

@@ -1,0 +1,98 @@
+/* FONT */
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+
+/* BACKGROUND */
+.theme-background {
+    background-color: #f1f1f1 !important;
+}
+
+
+
+
+/* NAVBAR */
+.navbar-light {
+    /* background */
+    background-color: #31343c !important;
+}
+
+.navbar-light li a {
+    /* link text */
+    color: #eb995a !important;
+    font-weight: 900;
+}
+
+.navbar-light li a:hover {
+    color: #fff !important;
+}
+
+
+
+
+/* FOOTER */
+.theme-foot-light {
+    color: #000 !important;
+    background-color: #bc4452 !important;
+}
+
+.theme-foot-dark {
+    color: #fff !important;
+    background-color: #31343c !important;
+}
+
+
+
+
+/* BUTTONS */
+.btn {
+    color: #fff !important;
+}
+
+.btn-primary, .page-link {
+    color: #fff !important;
+    background-color: #eb995a !important;
+    border-color: #31343c;
+}
+
+.btn-outline-primary {
+    color: #eb995a !important;
+    border-color: #eb995a !important;
+}
+
+.active {
+    color: #bc4452 !important;
+}
+
+
+
+
+/* POSTS */
+.card {
+    /**/
+    background-color: #fff !important;
+}
+
+.card-text {
+    color: #000 !important;
+}
+
+.card-title {
+    color: 000 !important;
+    font-weight: 900;
+}
+
+.card a.nav-link {
+    color: #db7c57;
+}
+
+.card a.nav-link:hover {
+    color: #bc4452 !important;
+}
+
+.card p.text-muted {
+    color: #50545f !important;
+}
